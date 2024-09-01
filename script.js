@@ -1,3 +1,6 @@
+// Save the initial content of the main area
+const initialMainContent = document.getElementById('content').innerHTML;
+
 // Load content based on section
 function loadContent(section) {
     fetch('content.txt')
@@ -62,7 +65,14 @@ function setActive(itemClass) {
     });
 }
 
-// Function to scroll to the main content
-function scrollToMain() {
+// Function to reset to the main content
+function resetToMain() {
+    // Restore the initial content of the main area
+    document.getElementById('content').innerHTML = initialMainContent;
+    
+    // Scroll to main content
     document.getElementById('content').scrollIntoView({ behavior: 'smooth' }); // 滾動到主內容
+
+    // Reset the active state for all sidebar items
+    setActive('');
 }
