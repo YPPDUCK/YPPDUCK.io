@@ -43,3 +43,14 @@ function toggleSubItems(sectionId) {
         }
     }
 }
+
+function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

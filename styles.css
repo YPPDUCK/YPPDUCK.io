@@ -31,7 +31,7 @@ aside {
     margin-bottom: 25px;
     background-color: #333333;
     color: #ff7f00;
-    font-size: 0.5em;
+    font-size: 1.0em;
     font-weight: bold;
     border-radius: 10px;
 }
@@ -95,12 +95,12 @@ main {
 
 /* 聯絡信息設置 */
 .contact-info {
+    color: #ff7f00;
     font-size: 0.9em;
-    color: #ffcc99;
 }
 
 .contact-info a {
-    color: #ff7f00;
+    color: #ffcc99;
     text-decoration: none;
 }
 
