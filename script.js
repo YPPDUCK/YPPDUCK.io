@@ -20,9 +20,13 @@ function loadContent(section) {
                 case 'other-experiences':
                     sectionContent = content[4];
                     break;
+                default:
+                    sectionContent = '<p>內容未找到</p>';
+                    break;
             }
             document.getElementById('content').innerHTML = sectionContent;
-        });
+        })
+        .catch(error => console.error('Error loading content:', error));
 }
 
 function toggleSubItems(sectionId) {
