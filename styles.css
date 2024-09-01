@@ -116,9 +116,12 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 加陰影效果 */
 }
 
-.resume-section h3 {
+.resume-section h3.section-title {
     color: #ff7f00; /* 橙色標題 */
-    margin-bottom: 10px;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff7f00; /* 底部橘色線條 */
+    padding-bottom: 5px;
 }
 
 .resume-section p, .resume-section ul, .resume-section li {
@@ -128,10 +131,37 @@ main {
 .resume-section ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
 .resume-section ul li {
     margin-bottom: 10px;
+    line-height: 1.8em;
+}
+
+.experience-item {
+    margin-top: 20px;
+}
+
+.job-title {
+    font-size: 1.2em;
+    color: #ffcc99; /* 職位名稱顏色 */
+    margin-bottom: 10px;
+}
+
+.job-details {
+    padding-left: 15px;
+    border-left: 3px solid #ff7f00; /* 左側橘色條 */
+}
+
+.job-details li {
+    margin-bottom: 8px;
+}
+
+/* 強調文字 */
+.highlight {
+    color: #ff7f00;
+    font-weight: bold;
 }
 
 /* 聯絡信息設置 */
