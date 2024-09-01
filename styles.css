@@ -103,3 +103,10 @@ main {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+/* 子項目列表隱藏 */
+.sub-list {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}

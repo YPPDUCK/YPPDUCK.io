@@ -24,3 +24,12 @@ function loadContent(section) {
             document.getElementById('content').innerHTML = sectionContent;
         });
 }
+
+function toggleSubItems(sectionId) {
+    const subList = document.getElementById(sectionId);
+    if (subList.style.display === "none" || subList.style.display === "") {
+        subList.style.display = "block";
+    } else {
+        subList.style.display = "none";
+    }
+}
