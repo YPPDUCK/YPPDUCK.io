@@ -35,27 +35,27 @@ aside ul li {
 }
 
 .sidebar-item:hover {
-    background-color: #3e3e3e; /* 滑鼠懸停效果 */
+    background-color: #ff6f00; /* 橙色效果 */
 }
 
 .item1 {
-    background-color: #66b2b2; /* 個別背景色 */
+    background-color: #ff8c00; /* 個別背景色 */
 }
 
 .item2 {
-    background-color: #6699b2;
+    background-color: #ff6f00;
 }
 
 .item3 {
-    background-color: #66b266;
+    background-color: #ff4500;
 }
 
 .item4 {
-    background-color: #b26666;
+    background-color: #ff6347;
 }
 
 .item5 {
-    background-color: #b29966;
+    background-color: #ff7f50;
 }
 
 main {
