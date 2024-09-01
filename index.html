@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>關於我</h1>
+        <h1>我的個人資料表</h1>
     </header>
-    <main>
-        <section id="content">
-            <!-- 內容將由 JavaScript 動態加載 -->
-        </section>
+    <aside>
+        <ul>
+            <li><a href="#" onclick="loadContent('autobiography')">自傳</a></li>
+            <li><a href="#" onclick="loadContent('study-plan')">讀書計畫</a></li>
+            <li><a href="#" onclick="loadContent('research-plan')">研究計畫</a></li>
+            <li><a href="#" onclick="loadContent('work-achievements')">作品成果</a></li>
+            <li><a href="#" onclick="loadContent('other-experiences')">其他經歷</a></li>
+        </ul>
+    </aside>
+    <main id="content">
+        <!-- 這裡會顯示不同的內容 -->
     </main>
-    <footer>
-        <p>© 2024 我的網站</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
