@@ -62,5 +62,5 @@ function setActive(itemClass) {
 }
 
 document.getElementById('logo').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // 滾動到頁面頂部
+    document.getElementById('content').scrollIntoView({ behavior: 'smooth' }); // 滾動到主內容
 });
