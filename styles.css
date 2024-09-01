@@ -110,8 +110,8 @@ main {
 
 /* 子項目列表隱藏 */
 .sub-list {
-    display: none;
+    display: none; /* 初始隐藏 */
     list-style-type: none;
     padding-left: 20px;
-    margin: 0; /* 確保沒有額外的 margin */
+    margin: 0;
 }

@@ -26,10 +26,11 @@ function loadContent(section) {
 }
 
 function toggleSubItems(sectionId) {
+    console.log(`Toggling section: ${sectionId}`); // 调试信息
     const subLists = document.querySelectorAll('.sub-list');
     subLists.forEach(list => {
         if (list.id !== sectionId) {
-            list.style.display = 'none'; // 收起其他子項目列表
+            list.style.display = 'none'; // 收起其他子项列表
         }
     });
 
