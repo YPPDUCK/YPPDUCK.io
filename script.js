@@ -26,10 +26,19 @@ function loadContent(section) {
 }
 
 function toggleSubItems(sectionId) {
+    const subLists = document.querySelectorAll('.sub-list');
+    subLists.forEach(list => {
+        if (list.id !== sectionId) {
+            list.style.display = 'none'; // 收起其他子項目列表
+        }
+    });
+
     const subList = document.getElementById(sectionId);
-    if (subList.style.display === "none" || subList.style.display === "") {
-        subList.style.display = "block";
-    } else {
-        subList.style.display = "none";
+    if (subList) {
+        if (subList.style.display === "none" || subList.style.display === "") {
+            subList.style.display = "block";
+        } else {
+            subList.style.display = "none";
+        }
     }
 }
