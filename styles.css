@@ -82,6 +82,7 @@ aside ul li {
     text-decoration: none;
     color: #ffcc99;
     transition: color 0.3s;
+    font-size: 0.9em; 
 }
 
 .sub-item:hover {
