@@ -63,6 +63,13 @@ aside ul li {
     color: #1a1a1a; /* 滑鼠懸停效果時改變文字顏色 */
 }
 
+/* 側欄按鈕選中效果 */
+.sidebar-item.active {
+    background-color: #ff7f00; /* 選中顏色 */
+    color: #1a1a1a; /* 選中文本顏色 */
+}
+
+
 /* 小標題按鈕設置 */
 .sub-item {
     display: block;

@@ -8,30 +8,29 @@
 </head>
 <body>
     <aside>
-        <div class="logo">
+        <div class="logo" id="logo">
             <h2>Yi-Ping Tang</h2>
-            <button onclick="scrollToTop()">回到最初畫面</button> <!-- 添加的回到最初畫面的按鈕 -->
         </div>
         <ul id="sidebar">
             <li>
-                <a href="#" onclick="toggleSubItems('autobiography')" class="sidebar-item item1">自傳</a>
+                <a href="#" onclick="toggleSubItems('autobiography'); setActive('item1')" class="sidebar-item item1" data-section="autobiography">自傳</a>
                 <ul id="autobiography" class="sub-list">
-                    <li><a href="#personal-background" class="sub-item" onclick="scrollToElement('personal-background')">個人背景</a></li>
-                    <li><a href="#learning-history" class="sub-item" onclick="scrollToElement('learning-history')">學習歷程</a></li>
-                    <li><a href="#extracurricular-activities" class="sub-item" onclick="scrollToElement('extracurricular-activities')">課外活動</a></li>
+                    <li><a href="#personal-background" class="sub-item">個人背景</a></li>
+                    <li><a href="#learning-history" class="sub-item">學習歷程</a></li>
+                    <li><a href="#extracurricular-activities" class="sub-item">課外活動</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#" onclick="toggleSubItems('study-plan')" class="sidebar-item item2">讀書計畫</a>
+                <a href="#" onclick="toggleSubItems('study-plan'); setActive('item2')" class="sidebar-item item2" data-section="study-plan">讀書計畫</a>
                 <ul id="study-plan" class="sub-list">
-                    <li><a href="#short-term" class="sub-item" onclick="scrollToElement('short-term')">近程 - 入學前</a></li>
-                    <li><a href="#mid-term" class="sub-item" onclick="scrollToElement('mid-term')">中程 - 碩士期間</a></li>
-                    <li><a href="#long-term" class="sub-item" onclick="scrollToElement('long-term')">遠程 - 畢業後</a></li>
+                    <li><a href="#short-term" class="sub-item">近程 - 入學前</a></li>
+                    <li><a href="#mid-term" class="sub-item">中程 - 碩士期間</a></li>
+                    <li><a href="#long-term" class="sub-item">遠程 - 畢業後</a></li>
                 </ul>
             </li>
-            <li><a href="#" onclick="loadContent('research-plan')" class="sidebar-item item3">研究計畫</a></li>
-            <li><a href="#" onclick="loadContent('work-achievements')" class="sidebar-item item4">作品成果</a></li>
-            <li><a href="#" onclick="loadContent('other-experiences')" class="sidebar-item item5">其他經歷</a></li>
+            <li><a href="#" onclick="loadContent('research-plan'); setActive('item3')" class="sidebar-item item3" data-section="research-plan">研究計畫</a></li>
+            <li><a href="#" onclick="loadContent('work-achievements'); setActive('item4')" class="sidebar-item item4" data-section="work-achievements">作品成果</a></li>
+            <li><a href="#" onclick="loadContent('other-experiences'); setActive('item5')" class="sidebar-item item5" data-section="other-experiences">其他經歷</a></li>
         </ul>
         <div class="contact-info">
             <p>name: <a href="namee">唐宜萍</a></p>

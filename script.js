@@ -26,11 +26,11 @@ function loadContent(section) {
 }
 
 function toggleSubItems(sectionId) {
-    console.log(`Toggling section: ${sectionId}`); // 调试信息
+    console.log(`Toggling section: ${sectionId}`); // 調試信息
     const subLists = document.querySelectorAll('.sub-list');
     subLists.forEach(list => {
         if (list.id !== sectionId) {
-            list.style.display = 'none'; // 收起其他子项列表
+            list.style.display = 'none'; // 收起其他子項目列表
         }
     });
 
@@ -44,13 +44,19 @@ function toggleSubItems(sectionId) {
     }
 }
 
-function scrollToElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
+function setActive(itemClass) {
+    const items = document.querySelectorAll('.sidebar-item');
+    items.forEach(item => {
+        if (item.classList.contains(itemClass)) {
+            item.style.backgroundColor = '#ff7f00'; // 選中顏色
+            item.style.color = '#1a1a1a'; // 選中文本顏色
+        } else {
+            item.style.backgroundColor = '#333333'; // 非選中顏色
+            item.style.color = '#f2f2f2'; // 非選中文本顏色
+        }
+    });
 }
 
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+document.getElementById('logo').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // 滾動到頁面頂部
+});
