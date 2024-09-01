@@ -62,7 +62,7 @@ function setActive(itemClass) {
     });
 }
 
-// Scroll to main content when logo is clicked
-document.getElementById('logo').addEventListener('click', () => {
+// Function to scroll to the main content
+function scrollToMain() {
     document.getElementById('content').scrollIntoView({ behavior: 'smooth' }); // 滾動到主內容
-});
+}
