@@ -3,22 +3,16 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
+    background-color: #1e1e1e; /* 暗色背景 */
+    color: #c7c7c7; /* 字體顏色 */
 }
 
 aside {
-    background-color: #f4f4f4;
     padding: 15px;
-    width: 200px;
+    width: 220px;
     height: 100vh;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    background-color: #2b2b2b; /* 側欄背景色 */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
 }
 
 aside ul {
@@ -30,12 +24,43 @@ aside ul li {
     margin: 10px 0;
 }
 
-aside ul li a {
+.sidebar-item {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #c7c7c7;
+    border-radius: 10px; /* 圓角矩形 */
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.sidebar-item:hover {
+    background-color: #3e3e3e; /* 滑鼠懸停效果 */
+}
+
+.item1 {
+    background-color: #66b2b2; /* 個別背景色 */
+}
+
+.item2 {
+    background-color: #6699b2;
+}
+
+.item3 {
+    background-color: #66b266;
+}
+
+.item4 {
+    background-color: #b26666;
+}
+
+.item5 {
+    background-color: #b29966;
 }
 
 main {
     flex-grow: 1;
     padding: 20px;
+    background-color: #2d2d2d; /* 主體背景色 */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
