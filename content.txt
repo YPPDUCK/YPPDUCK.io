@@ -1,33 +1,42 @@
-<a id="personal-background"></a>這裡是個人背景內容...
+<a id="personal-background"></a><h2>個人背景</h2>
+<p>這裡是你的個人背景內容，介紹你的基本資訊、家庭背景以及成長經歷。</p>
 
 ---
 
-<a id="learning-history"></a>這裡是學習歷程內容...
+<a id="learning-history"></a><h2>學習歷程</h2>
+<p>在這裡，你可以詳述你的學習經歷，從小學到大學，每個階段的學習經驗及重要成就。</p>
 
 ---
 
-<a id="extracurricular-activities"></a>這裡是課外活動內容...
+<a id="extracurricular-activities"></a><h2>課外活動</h2>
+<p>這裡可以描述你在課外參與的活動，如社團、志工服務、比賽經驗等，展現你多方面的能力。</p>
 
 ---
 
-<a id="short-term"></a>這裡是近程計畫內容...
+<a id="short-term"></a><h2>近程 - 入學前</h2>
+<p>這部分描述你在入學前的短期目標和計劃，如何為未來的學業和職涯打好基礎。</p>
 
 ---
 
-<a id="mid-term"></a>這裡是中程計畫內容...
+<a id="mid-term"></a><h2>中程 - 碩士期間</h2>
+<p>這裡可以詳細說明你在碩士期間的學習計劃及中期目標，如研究方向、專業技能的提升等。</p>
 
 ---
 
-<a id="long-term"></a>這裡是遠程計畫內容...
+<a id="long-term"></a><h2>遠程 - 畢業後</h2>
+<p>描述你在畢業後的長期目標，無論是繼續深造、投身職場還是創業，都可以在此展望未來。</p>
 
 ---
 
-<a id="research-plan"></a>這裡是研究計畫內容...
+<a id="research-plan"></a><h2>研究計畫</h2>
+<p>在這裡，描述你的研究計劃，具體包括研究問題、方法、預期成果及其意義。</p>
 
 ---
 
-<a id="work-achievements"></a>這裡是作品成果內容...
+<a id="work-achievements"></a><h2>作品成果</h2>
+<p>展示你在學業或工作中完成的重要作品和成就，如學術論文、專案作品、競賽獲獎等。</p>
 
 ---
 
-<a id="other-experiences"></a>這裡是其他經歷內容...
+<a id="other-experiences"></a><h2>其他經歷</h2>
+<p>這裡可以補充其他重要經歷，如交換學生、實習經歷、專業訓練或其他特別經歷。</p>
