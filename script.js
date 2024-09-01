@@ -1,3 +1,4 @@
+// Load content based on section
 function loadContent(section) {
     fetch('content.txt')
         .then(response => response.text())
@@ -29,6 +30,7 @@ function loadContent(section) {
         .catch(error => console.error('Error loading content:', error));
 }
 
+// Toggle visibility of sub-list items
 function toggleSubItems(sectionId) {
     console.log(`Toggling section: ${sectionId}`); // 調試信息
     const subLists = document.querySelectorAll('.sub-list');
@@ -48,19 +50,19 @@ function toggleSubItems(sectionId) {
     }
 }
 
+// Set active state for sidebar items
 function setActive(itemClass) {
     const items = document.querySelectorAll('.sidebar-item');
     items.forEach(item => {
         if (item.classList.contains(itemClass)) {
-            item.style.backgroundColor = '#ff7f00'; // 選中顏色
-            item.style.color = '#1a1a1a'; // 選中文本顏色
+            item.classList.add('active'); // 添加active類別
         } else {
-            item.style.backgroundColor = '#333333'; // 非選中顏色
-            item.style.color = '#f2f2f2'; // 非選中文本顏色
+            item.classList.remove('active'); // 移除active類別
         }
     });
 }
 
+// Scroll to main content when logo is clicked
 document.getElementById('logo').addEventListener('click', () => {
     document.getElementById('content').scrollIntoView({ behavior: 'smooth' }); // 滾動到主內容
 });

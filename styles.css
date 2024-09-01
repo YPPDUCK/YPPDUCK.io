@@ -34,6 +34,12 @@ aside {
     font-size: 1.0em;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer; /* 改變游標形狀 */
+    transition: background-color 0.3s; /* 添加過渡效果 */
+}
+
+.logo:hover {
+    background-color: #444444; /* Hover 顏色 */
 }
 
 /* 側欄按鈕設置 */
@@ -68,7 +74,6 @@ aside ul li {
     background-color: #ff7f00; /* 選中顏色 */
     color: #1a1a1a; /* 選中文本顏色 */
 }
-
 
 /* 小標題按鈕設置 */
 .sub-item {
