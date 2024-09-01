@@ -13,14 +13,15 @@ body {
 /* 側欄設置 */
 aside {
     padding: 20px;
-    width: 240px;
+    width: 240px; /* 固定側欄寬度 */
+    flex-shrink: 0; /* 防止側欄收縮 */
     height: 100vh;
     background-color: #222222; /* 側欄深色背景 */
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* 確保內容從上到下排列 */
-    overflow-y: auto; /* 滾動條以防子項目過多 */
+    overflow-y: auto; /* 允許側欄內滾動，但固定寬度 */
 }
 
 /* 名字標誌設置 */
@@ -123,7 +124,7 @@ main {
 
 /* 子項目列表隱藏 */
 .sub-list {
-    display: none; /* 初始隐藏 */
+    display: none; /* 初始隱藏 */
     list-style-type: none;
     padding-left: 20px;
     margin: 0;
