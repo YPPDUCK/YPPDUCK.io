@@ -184,7 +184,7 @@ main {
 }
 
 main h2 {
-    font-size: 2em;
+    font-size: 2.4em;
     color: #ff6600;
     margin-bottom: 25px;
     border-bottom: 3px solid #ff6600;
@@ -193,7 +193,7 @@ main h2 {
 }
 
 main h3 {
-    font-size: 1.4em;
+    font-size: 1.8em;
     color: #ffb366;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -201,7 +201,7 @@ main h3 {
 }
 
 main h4 {
-    font-size: 1.2em;
+    font-size: 1.6em;
     color: #ff8533;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -263,4 +263,42 @@ footer strong {
 ::-webkit-scrollbar-thumb {
     background-color: #ff6600;
     border-radius: 12px;
+}
+
+/* 配置個人資料容器 */
+.profile-container {
+    display: flex; /* 使用 Flexbox 排版 */
+    align-items: center; /* 垂直方向居中對齊 */
+    gap: 50px; /* 圖片與文字之間的間距 */
+    margin-bottom: 15px; /* 與下方內容的距離 */
+    padding: 20px; /* 內邊距 */
+    border: 2px solid #e0935fb3; /* 邊框顏色和厚度 */
+    border-radius: 10px; /* 圓角 */
+    background-color: #f6b387de; /* 背景顏色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+}
+
+/* 配置個人照片 */
+.profile-photo {
+    width: 300px; /* 照片寬度 */
+    height: auto; /* 自動調整高度保持比例 */
+    border-radius: 0px; /* 照片圓角 */
+    margin: 10px;
+}
+
+/* 基本資料文字樣式 */
+.profile-info {
+    display: flex;
+    flex-direction: column; /* 垂直顯示文字 */
+    gap: 5px; /* 調整文字之間的間距 */
+}
+
+/* 調整文字樣式 */
+.profile-info p {
+    font-size: 20px; /* 調整字體大小 */
+    font-weight: bold; /* 調整字體粗細 */
+    color: #2d1d08; /* 設置文字顏色 */
+    line-height: 0.8; /* 調整行高 */
+    letter-spacing: 0.5px; /* 調整字間距 */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* 添加文本陰影 */
 }
