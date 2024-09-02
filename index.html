@@ -7,84 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <aside>
-        <div class="logo" id="logo" onclick="resetToMain()">
-            <h2>Yi-Ping Tang</h2>
+    <header>
+        <div class="logo" id="logo">
+            <h2>YiPing</h2>
         </div>
-        <ul id="sidebar">
-            <li>
-                <a href="#" onclick="toggleSubItems('autobiography'); loadContent('autobiography'); setActive('item1')" class="sidebar-item item1" data-section="autobiography">自傳</a>
-                <ul id="autobiography" class="sub-list">
-                    <li><a href="#" onclick="loadContent('autobiography');" class="sub-item">個人背景</a></li>
-                    <li><a href="#" onclick="loadContent('autobiography');" class="sub-item">學習歷程</a></li>
-                    <li><a href="#" onclick="loadContent('autobiography');" class="sub-item">課外活動</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="toggleSubItems('study-plan'); loadContent('study-plan'); setActive('item2')" class="sidebar-item item2" data-section="study-plan">讀書計畫</a>
-                <ul id="study-plan" class="sub-list">
-                    <li><a href="#" onclick="loadContent('study-plan');" class="sub-item">近程 - 入學前</a></li>
-                    <li><a href="#" onclick="loadContent('study-plan');" class="sub-item">中程 - 碩士期間</a></li>
-                    <li><a href="#" onclick="loadContent('study-plan');" class="sub-item">遠程 - 畢業後</a></li>
-                </ul>
-            </li>
-            <li><a href="#" onclick="loadContent('research-plan'); setActive('item3')" class="sidebar-item item3" data-section="research-plan">研究計畫</a></li>
-            <li><a href="#" onclick="loadContent('work-achievements'); setActive('item4')" class="sidebar-item item4" data-section="work-achievements">作品成果</a></li>
-            <li><a href="#" onclick="loadContent('other-experiences'); setActive('item5')" class="sidebar-item item5" data-section="other-experiences">其他經歷</a></li>
-        </ul>
-        <div class="contact-info">
-            <p>name: <a href="namee">唐宜萍</a></p>
-            <p>phone: <a href="phone">0970050631</a></p>
-            <p>mail: <a href="mail">ypduck1031@gmail.com</a></p>
-            <p>Graduated: <a href="school">國立中興大學</a></p>
-            <p>major: <a href="major">應用數學系</a></p>
-        </div>
-    </aside>
+        <nav>
+            <ul id="sidebar">
+                <li><a href="#" class="sidebar-item item1" data-section="autobiography">自傳</a></li>
+                <li><a href="#" class="sidebar-item item2" data-section="study-plan">讀書計畫</a></li>
+                <li><a href="#" class="sidebar-item item3" data-section="research-plan">研究計畫</a></li>
+                <li><a href="#" class="sidebar-item item4" data-section="work-achievements">作品成果</a></li>
+                <li><a href="#" class="sidebar-item item5" data-section="other-experiences">其他經歷</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
     <main id="content">
         <h2>個人簡歷</h2>
-        <section class="resume-section">
-            <h3 class="section-title">基本資料</h3>
-            <p><span class="highlight">性別：</span>女</p>
-            <p><span class="highlight">生日：</span>2001/10/31</p>
-            <p><span class="highlight">出生地：</span>雲林縣</p>
-            <p><span class="highlight">學歷：</span>國立中興大學 應用數學系 應用數學組（2024 畢業）</p>
+        <section>
+            <h3>基本資料</h3>
+            <p>性別：女</p>
+            <p>生日：2001/10/31</p>
+            <p>出生地：雲林縣</p>
+            <p>學歷：國立中興大學 應用數學系 應用數學組（2024畢業）</p>
         </section>
-        <section class="resume-section">
-            <h3 class="section-title">個人優勢</h3>
-            <ul class="advantage-list">
-                <li><span class="highlight">熟悉使用</span> Python、SQL 解決數據相關問題，並會使用 C++ 和 JavaScript</li>
-                <li>具備爬蟲實務經驗，能使用 bs4 爬取數據，並學習使用 Selenium 動態網頁爬蟲</li>
-                <li>使用 Postman 協助呼叫 API 存取數據和資料倉儲</li>
+        
+        <section>
+            <h3>個人優點</h3>
+            <ul>
+                <li>熟悉使用 Python 、SQL 解決數據相關問題，也會使用 C++ 和 Javascript</li>
+                <li>有爬蟲經驗，熟悉使用 bs4 爬取數據，也學習使用 Selenium 動態網頁爬蟲</li>
+                <li>熟悉使用 Postman 協助呼叫 API 存取數據及資料倉儲</li>
                 <li>使用 Git 版本控制，來協作多人開發專案</li>
-                <li>修習機率、統計、數理科學，且具有優異的邏輯及數理能力</li>
+                <li>修習數學、統計學、數理邏輯，且有優異的邏輯與數理能力</li>
             </ul>
         </section>
-        <section class="resume-section">
-            <h3 class="section-title">個人特質</h3>
-            <p>創意思維、堅持毅力、團隊合作、好奇心</p>
-        </section>
-        <section class="resume-section">
-            <h3 class="section-title">工作經驗</h3>
-            <div class="experience-item">
-                <h4 class="job-title">2024.06 - 2024.09 自行車科技（數據工程暑期實習）</h4>
-                <ul class="job-details">
-                    <li>參與 AI 預測分析科技團隊，擔任暑期數據工程實習生</li>
-                    <li>負責從資料撈取（爬蟲或 API)、清洗整理，再進行機器學習建模</li>
-                    <li>學習部署自動排程，因此學習了程式碼優化和軟體開發</li>
-                    <li>團隊使用 Scrum（敏捷開發框架）</li>
-                    <li>清楚認知自己對資料科學、數據科學有濃厚興趣</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h4 class="job-title">2024.03 - 2024.05 T大使（亞太行銷數位轉型聯盟協會 - 阿聰師的糕餅主意團隊）</h4>
-                <ul class="job-details">
-                    <li>幫助企業數位化應用數位行銷工具和策略，推動轉型和增長</li>
-                    <li>學習利用 GA、Power BI 等工具以實踐 SEO</li>
-                    <li>清楚認知自己對數據分析的興趣不大</li>
-                </ul>
-            </div>
+        
+        <section>
+            <h3>學習經驗</h3>
+            <h4>風車科技（數據工程暑期實習）</h4>
+            <p>2024.06 - 2024.09</p>
+            <p>工作內容：創建AI預測分析科技團隊，擔任暑期數據工程實習生。主要負責資料撈取（爬蟲或API）、清洗整理，再進行機器學習建模。學習自動化部署和軟體工程的流程管理，使用Scrum敏捷開發框架，確認自己對資料科學和數據科學有濃厚興趣。</p>
+    
+            <h4>T大使（亞太行銷數據轉型聯盟協會 - 阿聰師的糕餅主題團隊）</h4>
+            <p>2024.03 - 2024.05</p>
+            <p>工作內容：幫助企業數據化行銷工具和策略行銷，促進數據轉型和策略應用。學習使用 GA、Power BI 等工具進行SEO數據分析，發現自己對數據分析的興趣不大。</p>
         </section>
     </main>
+
+    <footer class="contact-info">
+        <p><strong>Mail : </strong><a href="mailto:ypduck1031@gmail.com">ypduck1031@gmail.com</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

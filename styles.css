@@ -1,188 +1,266 @@
 /* 全局設置 */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif; /* 使用現代字體 */
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #1a1a1a; /* 深色背景 */
+    flex-direction: column; /* 確保垂直排列 */
+    background-color: #0d0d0d; /* 深色背景 */
     color: #f2f2f2; /* 字體顏色 */
-    height: 100vh;
-    overflow: hidden; /* 防止整體滾動條 */
+    min-height: 100vh;
 }
 
-/* 側欄設置 */
-aside {
-    padding: 20px;
-    width: 240px; /* 固定側欄寬度 */
-    flex-shrink: 0; /* 防止側欄收縮 */
-    height: 100vh;
-    background-color: #222222; /* 側欄深色背景 */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* 確保內容從上到下排列 */
-    overflow-y: auto; /* 允許側欄內滾動，但固定寬度 */
-}
-
-/* 名字標誌設置 */
+/* logo 設置 */
 .logo {
-    padding: 15px;
-    border: 2px solid #ff7f00;
-    text-align: center;
-    margin-bottom: 25px;
-    background-color: #333333;
-    color: #ff7f00;
-    font-size: 1.0em;
+    font-size: 0.8em;
     font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer; /* 改變游標形狀 */
-    transition: background-color 0.3s; /* 添加過渡效果 */
+    color: #ff6600;
+    background-color: #2e2e2e;
+    padding: 1px 10px;
+    border-radius: 12px; /* 圓角效果 */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin-right: 20px; /* 添加右側外邊距 */
 }
 
 .logo:hover {
-    background-color: #444444; /* Hover 顏色 */
+    background-color: #ff8533; /* 橘色效果 */
+    color: #0d0d0d;
+    transform: scale(1.05); /* 放大效果 */
 }
 
-/* 側欄按鈕設置 */
-aside ul {
+.logo:active {
+    background-color: #ff6600; /* 按下效果 */
+    color: #ffffff;
+    transform: scale(0.95); /* 輕微縮小效果 */
+}
+
+/* 父欄位設計 */
+nav ul {
     list-style-type: none;
+    margin: 0 auto;
     padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* 左對齊 */
+    align-items: center;
+    gap: 30px; /* 父欄位之間的間距 */
 }
 
-aside ul li {
-    margin: 15px 0;
+nav ul li {
+    position: relative;
 }
 
-.sidebar-item {
-    display: block;
-    padding: 12px;
+nav ul li a {
+    font-size: 1.2em; /* 增大字體 */
+    color: #f2f2f2; /* 初始字體顏色 */
     text-decoration: none;
-    color: #f2f2f2;
-    background-color: #333333;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: center;
+    padding: 10px 15px; /* 增加內間距 */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* 平滑過渡效果 */
+    border-radius: 8px; /* 圓角 */
 }
 
-.sidebar-item:hover {
-    background-color: #ff7f00; /* 橙色效果 */
-    color: #1a1a1a; /* 滑鼠懸停效果時改變文字顏色 */
+/* 懸停效果 */
+nav ul li a:hover {
+    background-color: #ff8533; /* 背景顏色變化 */
+    color: #0d0d0d; /* 字體顏色變化 */
+    transform: scale(1.05); /* 輕微放大 */
 }
 
-/* 側欄按鈕選中效果 */
-.sidebar-item.active {
-    background-color: #ff7f00; /* 選中顏色 */
-    color: #1a1a1a; /* 選中文本顏色 */
+/* 點擊後保持樣式 */
+nav ul li a.active {
+    background-color: #ff6600; /* 點擊後的背景顏色 */
+    color: #0d0d0d; /* 點擊後的字體顏色改為黑色 */
+    transform: scale(1.05); /* 保持放大的效果 */
 }
 
-/* 小標題按鈕設置 */
-.sub-item {
-    display: block;
-    padding: 8px 20px;
-    text-decoration: none;
-    color: #ffcc99;
-    transition: color 0.3s;
-    font-size: 0.9em; 
+/* LOGO 樣式 */
+.logo {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ff6600;
+    background-color: #2e2e2e;
+    padding: 5px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin-right: 20px; /* 添加右側外邊距 */
 }
 
-.sub-item:hover {
-    color: #ff7f00; /* 滑鼠懸停效果 */
+.logo:hover {
+    background-color: #ff8533; /* 橘色效果 */
+    color: #0d0d0d;
+    transform: scale(1.05); /* 放大效果 */
 }
 
-.item1 { background-color: #444444; }
-.item2 { background-color: #555555; }
-.item3 { background-color: #666666; }
-.item4 { background-color: #777777; }
-.item5 { background-color: #888888; }
+.logo:active {
+    background-color: #ff6600; /* 按下效果 */
+    color: #ffffff;
+    transform: scale(0.95); /* 輕微縮小效果 */
+}
+
+/* 固定頂部欄設置 */
+header {
+    width: 100%;
+    background-color: #1a1a1a; /* 深灰色背景 */
+    padding: 15px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* 頂部工具欄 */
+nav {
+    flex-grow: 1; /* 使nav佔據header剩餘空間 */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* 左對齊，緊挨logo */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 5px; /* 左右兩側設置間距 */
+    position: relative;
+}
+
+/* 修改工具欄項目字體大小和間距 */
+nav ul li a {
+    font-size: 1.2em; /* 增大字體 */
+    padding: 5px 5px; /* 增加內間距 */
+    color: #f2f2f2; /* 字體顏色 */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* 增加過渡效果 */
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+    background-color: #ff8533;
+    color: #0d0d0d;
+    transform: scale(1.05);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* 改善工具欄子欄位寬度 */
+.sub-list {
+    display: none; /* 隱藏子列表 */
+    position: absolute;
+    top: 220%; /* 子列表定位於父項下方 */
+    left: 0;
+    min-width: 200px; /* 設置最小寬度 */
+    background-color: #2e2e2e;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav ul li:hover .sub-list {
+    display: block; /* 滑鼠懸停時顯示子列表 */
+}
 
 /* 主體內容設置 */
 main {
-    flex-grow: 1;
-    padding: 30px;
-    background-color: #1a1a1a;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
-    font-size: 1.1em;
-    line-height: 1.6em;
-    overflow-y: auto; /* 防止內容超出範圍 */
-}
-
-/* 履歷區塊樣式 */
-.resume-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #222222; /* 區塊背景顏色 */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 加陰影效果 */
-}
-
-.resume-section h3.section-title {
-    color: #ff7f00; /* 橙色標題 */
-    font-size: 1.4em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ff7f00; /* 底部橘色線條 */
-    padding-bottom: 5px;
-}
-
-.resume-section p, .resume-section ul, .resume-section li {
-    color: #f2f2f2; /* 內容顏色 */
-}
-
-.resume-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.resume-section ul li {
-    margin-bottom: 10px;
-    line-height: 1.8em;
-}
-
-.experience-item {
-    margin-top: 20px;
-}
-
-.job-title {
+    margin-top: 100px; /* 為頂部欄預留空間 */
+    padding: 40px;
+    background-color: #121212; /* 深色背景 */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
     font-size: 1.2em;
-    color: #ffcc99; /* 職位名稱顏色 */
-    margin-bottom: 10px;
+    line-height: 1.6em;
+    overflow-y: auto;
+    flex: 1; /* 填滿剩餘空間 */
 }
 
-.job-details {
-    padding-left: 15px;
-    border-left: 3px solid #ff7f00; /* 左側橘色條 */
+main h2 {
+    font-size: 2em;
+    color: #ff6600;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #ff6600;
+    padding-bottom: 10px;
+    letter-spacing: 1.5px;
 }
 
-.job-details li {
-    margin-bottom: 8px;
+main h3 {
+    font-size: 1.4em;
+    color: #ffb366;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-/* 強調文字 */
-.highlight {
-    color: #ff7f00;
-    font-weight: bold;
+main h4 {
+    font-size: 1.2em;
+    color: #ff8533;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 0.8px;
 }
 
-/* 聯絡信息設置 */
-.contact-info {
-    color: #ff7f00;
-    font-size: 0.9em;
+main ul {
+    padding-left: 25px;
+    list-style-type: disc;
+}
+
+main li {
+    margin-bottom: 15px;
+}
+
+/* 底部聯絡信息設置 */
+footer.contact-info {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 中心對齊 */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 每個項目之間的間距 */
+    background-color: #1a1a1a; /* 深灰色背景 */
+    color: #ffb366;
+    padding: 8px;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0; /* 移除默認外邊距 */
+    padding: 0; /* 移除默認內邊距 */
+    display: inline; /* 將每個段落顯示為內聯元素 */
+    color: #ffb366; /* 文字顏色 */
+}
+
+footer strong {
+    color: #ff6600; /* 強調文字的顏色 */
+    margin-right: 5px; /* 添加右邊的間距 */
 }
 
 .contact-info a {
-    color: #ffcc99;
-    text-decoration: none;
+    color: #ffb366; /* 設置郵件連結的文字顏色 */
+    text-decoration: none; /* 移除下劃線 */
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    color: #6666c6; /* 懸停時的文字顏色 */
+    text-decoration: underline; /* 懸停時顯示下劃線 */
 }
 
-/* 子項目列表隱藏 */
-.sub-list {
-    display: none; /* 初始隱藏 */
-    list-style-type: none;
-    padding-left: 20px;
-    margin: 0;
+/* 滾動條樣式 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600;
+    border-radius: 12px;
 }
