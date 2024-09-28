@@ -251,6 +251,37 @@ footer strong {
     text-decoration: underline; /* 懸停時顯示下劃線 */
 }
 
+/* 自傳段落間距與行距調整 */
+.autobiography-section p {
+    margin-bottom: 25px; /* 增加段落間距 */
+    line-height: 1.75; /* 調整行距 */
+    text-align: justify; /* 兩端對齊，讓文本排版更整齊 */
+}
+
+/* 標題層次感強化 */
+.autobiography-section h2 {
+    margin-bottom: 30px; /* 增加標題與段落之間的間距 */
+    font-size: 2.2em;
+}
+
+.autobiography-section h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* 內文容器的外邊距與內邊距調整 */
+.autobiography-section {
+    padding: 20px 40px; /* 調整左右內邊距，讓文字部分更集中 */
+    margin-bottom: 50px; /* 增加區塊間距，讓段落更獨立 */
+}
+
+/* 高亮顯示的文字樣式 */
+.highlight {
+    color: #ffb366; /* 使用亮橘色來強調 */
+    font-weight: bold; /* 加粗文字 */
+}
+
 /* 滾動條樣式 */
 ::-webkit-scrollbar {
     width: 10px;
